@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/habsidadb
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+jwt:
+  secret: ${JWT_SECRET}
+  expiration: 86400000
+
+cors:
+  allowed-origins:
+    http://localhost:5173,
+    http://localhost:5174
+
+app:
+  seed:
+    enabled: ${APP_SEED_ENABLED:false}
+    admin-password: ${SEED_ADMIN_PASSWORD}
+    merchant-password: ${SEED_MERCHANT_PASSWORD}
